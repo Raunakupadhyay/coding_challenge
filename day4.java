@@ -6,7 +6,7 @@ public class day4 {
 
     // Solution class definition
     static class Solution {
-        private void swap(int[] nums, int i, int j) {
+        private void swap(int[] nums, int i, int j) {    //Dutch National Flag Problem
             int temp = nums[i];
             nums[i] = nums[j];
             nums[j] = temp;
@@ -37,7 +37,6 @@ public class day4 {
         for(int i=0;i<n;i++){
             nums[i]=sc.nextInt();
         }
-        // int[] nums = {2, 0, 2, 1, 1, 0};
         Solution solution = new Solution();
 
         System.out.println("Before sorting:");
