@@ -4,19 +4,18 @@ class Solution {
         int r=nums.length-1;
         while(l<=r){
             int mid=l+(r-l)/2;
-            for(int i=0;i<nums.length;i++){
                 if(nums[mid]==target){
                     return mid;
                 }
                 if(nums[l]<=nums[mid]){
-                    if(target>nums[l] && target<nums[mid]){
+                    if(target>=nums[l] && target<nums[mid]){
                         r=mid-1;
                     }else{
                         l=mid+1;
                     }
 
                 }else{
-                    if(target>nums[mid] && target<nums[r]){
+                    if(target>nums[mid] && target<=nums[r]){
                         l=mid+1;
                     }else{
                         r=mid-1;
@@ -24,9 +23,7 @@ class Solution {
                 }
 
             }
+            return -1;
 
-
-        }
-        return -1;
     }
 }
